@@ -1,19 +1,94 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Galeria de Fotos</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="./estilo.css">
 </head>
 
 <body>
-    <header wm-include="/pages/template/header.html"></header>
-    <main class="bg-light" wm-include="/pages/galery/galery.html"></main>
-    <footer class="footer" wm-include="/pages/template/footer.html"></footer>
-    <script src="app.js"></script>
-</body>
+    <div class="bg-dark collapse" id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-md-7 py-4">
+                    <h4 class="text-white">Sobre</h4>
+                    <p class="text-muted">Escreva sobre você...</p>
+                </div>
+                <div class="col-sm-4 offset-md-1 py-4">
+                    <h4 class="text-white">Contato</h4>
+                    <ul class="list-unstyled py-2">
+                        <li><a href="#" class="text-white">Twitter</a></li>
+                        <li><a href="#" class="text-white">Facebook</a></li>
+                        <li><a href="mailto:#" class="text-white">E-mail</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+                <i class="fa fa-camera-retro"></i><strong class="pl-2"> Galeria </strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#header" aria-controls="header" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </div>
+    <div class="container mt-5">
 
+        <div class="row justify-content-center pb-5">
+            <div wm-city-buttons></div>
+        </div>
+        
+        <div class="row d-flex justify-content-center">
+            <!-- disp. pequeno: 1 imagem por linha -->
+            <!-- disp. médio: 2 imagens por linha -->
+            <!-- disp. grande: 3 imagem por linha -->
+            <div class="col-12 col-md-6 col-lg-3"> 
+                <img src="./imgs/ny1.png" class="img-fluid mb-4" 
+                wm-city="New York">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3"> 
+                <img src="./imgs/ny2.png" class="img-fluid mb-4" 
+                wm-city="New York">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3"> 
+                <img src="./imgs/floripa1.png" class="img-fluid mb-4" 
+                wm-city="Florianópolis">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3"> 
+                <img src="/imgs/ny3.png" class="img-fluid mb-4" 
+                wm-city="New York">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3"> 
+                <img src="/imgs/rj1.png" class="img-fluid mb-4" 
+                wm-city="Rio de Janeiro">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3"> 
+                <img src="/imgs/ny4.png" class="img-fluid mb-4" 
+                wm-city="New York">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3"> 
+                <img src="/imgs/rj1.png" class="img-fluid mb-4" 
+                wm-city="Rio de Janeiro">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3"> 
+                <img src="/imgs/floripa1.png" class="img-fluid mb-4" 
+                wm-city="Florianópolis">
+            </div>
+        </div>
+    </div>
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">Minhas Viagens</h1>
+            <p class="lead text-muted">Relembrar é viver!</p>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
